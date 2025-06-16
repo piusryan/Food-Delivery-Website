@@ -1,0 +1,86 @@
+body {
+ font-family: Arial, sans-serif;
+    background-image: url('why.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+}
+
+.container {
+ max-width: 800px;
+ margin: 0 auto;
+}
+
+.membership-plans {
+ display: flex;
+ justify-content: space-between;
+}
+
+.membership-plan {
+ flex: 1;
+ padding: 20px;
+ border: 1px solid #ddd;
+ margin-right: 20px;
+}
+
+.membership-plan:last-child {
+ margin-right: 0;
+}
+
+
+.membership-plan h2 {
+ font-size: 24px;
+ margin-bottom: 10px;
+}
+
+.membership-plan p {
+ font-size: 16px;
+ margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row; /* change to row */
+  align-items: center; /* center the items vertically */
+  justify-content: space-between; /* distribute the items evenly in the horizontal space */
+  width: 100%; /* take up the full width */
+  background-color: #333;
+  position: fixed; /* fix it to the top */
+  top: 0; /* position it at the top */
+  left: 0; /* position it at the left */
+  right: 0; /* position it at the right */
+}
+
+.nav-link {
+  display: inline-block; /* change to inline-block */
+  padding: 20px 20px; /* added padding to top and bottom */
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Times New Roman', cursive;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #555;
+}
+
+
+
+
+
+.logo-image { width: 250px;  }
+
+

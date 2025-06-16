@@ -1,0 +1,131 @@
+body {
+ font-family: Arial, sans-serif;
+ background-color: #f8f9fa;
+ color: #212529;
+ margin: 0;
+ padding: 0;
+ background-image: url('mem.jpg');
+ background-size: cover;
+ background-position: center;
+}
+
+header {
+ background-color: #343a40;
+ color: #ffffff;
+ padding: 20px;
+ text-align: center;
+}
+
+main {
+ padding: 20px;
+}
+
+h1 {
+ font-size: 2.5rem;
+}
+
+h2 {
+ font-size: 2rem;
+}
+
+p {
+ font-size: 1.125rem;
+ line-height: 1.75;
+}
+
+ul {
+ list-style-type: none;
+ padding: 0;
+}
+
+li {
+ margin-bottom: 5px;
+}
+
+a {
+ color: #343a40;
+ text-decoration: none;
+}
+
+a:hover {
+ text-decoration: underline;
+}
+
+footer {
+ background-color: #343a40;
+ color: #ffffff;
+ padding: 20px;
+ text-align: center;
+}
+
+
+
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row; /* change to row */
+    align-items: center; /* center the items vertically */
+    justify-content: space-between; /* distribute the items evenly in the horizontal space */
+    width: 100%; /* take up the full width */
+    background-color: #333;
+    position: fixed; /* fix it to the top */
+    top: 0; /* position it at the top */
+    left: 0; /* position it at the left */
+    right: 0; /* position it at the right */
+  }
+  
+  .nav-link {
+    display: inline-block; /* change to inline-block */
+    padding: 20px 20px; /* added padding to top and bottom */
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Times New Roman', cursive;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: #555;
+  }
+  
+  
+
+  
+.logo-image { width: 250px; 
+              }
+
+
+
+              .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+              }
+              
+              .president, .Vice, .Marketing, .finance {
+                flex: 1;
+                min-width: 200px;
+                max-width: 300px;
+                margin: 10px;
+                padding: 20px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                background-color: black; /* Set background color to black */
+                color: white; /* Set text color to white for better visibility */
+              }
+              
+              /* Arrange items in a 2x2 grid */
+              .president,
+              .Vice {
+                flex-basis: calc(50% - 20px); /* Adjust for margins */
+              }
+              
+              .Marketing,
+              .finance {
+                flex-basis: calc(50% - 20px); /* Adjust for margins */
+              }
+              

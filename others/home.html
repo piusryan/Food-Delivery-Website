@@ -1,0 +1,173 @@
+<html>
+  <head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
+  
+    <link rel="icon" href="pk1.jpeg">
+  </head>
+
+  <title>HOME</title>
+  <body>
+   
+    <script src="order.js"></script>
+
+    
+
+
+
+    <header>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="home.html" class="nav-link">Home</a></li>
+          <li><a href="why.html" class="nav-link">Why You'll Love us</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="faq.html" class="nav-link">Contact</a></li>
+          <li><a href="member.html" class="nav-link">MEMBERSHIP</a></li>
+          <li><a href="management.html" class="nav-link">MANAGEMENT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+
+    <div class="container">
+      <h1>All Best Recipes<br>In One Place</h1>
+      <p> ~ donde el sabor es lo que importa.....</p>
+
+      
+      <main>
+        <section class="hero">
+          <h2>Get food delivery & more from local restaurants</h2>
+    
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Order Now
+          </button>
+
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+    
+                <!-- Modal Header -->
+                <div class="modal-header">
+                 
+                  <img src="tenor.gif" alt="Tick mark">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+  
+                </div>
+                 
+                <!-- Modal body -->
+                <div class="modal-body">
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal" id="submitBtn">OK</button>
+                  <a href="order.pdf"><button class="custom-btn btn-1">get receipt</button></a>
+  
+                </div>  </div>
+            </div>  </div>
+        </section>
+      </main>
+      <div class="most-favorites">
+        <h2>Most Favorites Items</h2>
+        <form action="order.html" method="post">
+        
+      
+        <ul>
+            
+          <li><input type="checkbox" name="selected_items[]" value="Chicken Curry|15.10" id="curry-checkbox" />
+            <label for="curry-checkbox"></label>
+            <span>Chicken Curry</span> <span class="price">&#8377 15.10</span> </li>
+          <img src="chi.jpg" alt="Opulent Flavors Logo" class="logo-image">
+
+          <li><input type="checkbox" name="selected_items[]" value="Delicious Pizza|15.1" id="pizza-checkbox" />
+             <label for="pizza-checkbox"></label>
+            <span>Delicious Pizza <span class="price">&#8377 15.1</span></li>
+          <img src="piza.jpg" alt="Opulent Flavors Logo" class="logo-image">
+
+          <li><input type="checkbox"  name="selected_items[]" value="Big Hamburger|15.1" id="burger-checkbox" /> 
+            <label for="burger-checkbox"></label>
+            Big Hamburger <span class="price">&#8377 15.1</span></li>
+          <img src="burger.jpg" alt="Opulent Flavors Logo" class="logo-image">
+
+
+
+          <li><input type="checkbox" name="selected_items[]" value="Chicken Steak|25.5" id="steak-checkbox" /> <label for="steak-checkbox"></label>
+            Chicken Steak <span class="price">&#8377 25.5</span></li>
+          <img src="steak.jpg" alt="Opulent Flavors Logo" class="logo-image">
+
+
+
+          <li><input type="checkbox" name="selected_items[]" value="Chicken wings|30.1" id="wings-checkbox" /> <label for="wings-checkbox"></label>
+            Chicken Wings <span class="price">&#8377 30.1</span></li>
+          <img src="wings.jpg" alt="Opulent Flavors Logo" class="logo-image">
+        </ul>    
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('itemForm');
+            const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+        
+            checkboxes.forEach(function (checkbox) {
+                checkbox.addEventListener('change', function () {
+                    displaySelectedItems(form);
+                });
+            });
+        
+            function displaySelectedItems(form) {
+                const selectedItems = [];
+                form.querySelectorAll('input[type="checkbox"]:checked').forEach(function (checkbox) {
+                    selectedItems.push(checkbox.value);
+                });
+        
+                // Open a new window and display selected items
+                const newWindow = window.open('', '_blank');
+                newWindow.document.write('<html><head><title>Selected Items</title></head><body>');
+                newWindow.document.write('<div class="selected-items"><h2>Selected Items</h2><ul>');
+        
+                selectedItems.forEach(function (item) {
+                    const [name, price] = item.split('|');
+                    newWindow.document.write('<li>' + name + ' - Price: &#8377;' + price + '</li>');
+                });
+        
+                newWindow.document.write('</ul></div></body></html>');
+                newWindow.document.close();
+            }
+        });
+        </script>
+
+    </form>
+
+
+      <div class="daily-trending">
+        <h2>Daily Trending Menus</h2>
+        <ul>
+          <li><input type="checkbox" id="spagethi-checkbox" /> <label for="spagethi-checkbox"></label>
+            Medium Spicy Spagethi Italiano <span class="price">&#8377 5.6</span></li>
+          <img src="cheesespageti.jpg" alt="Opulent Flavors Logo" class="logo-image">
+
+          <li><input type="checkbox" id="watermelon-checkbox" /> <label for="watermelon-checkbox"></label>
+            Watermelon juice with ice <span class="price">&#8377 5.6</span> </li>
+          <img src="watermelon.jpg" alt="Opulent Flavors Logo" class="logo-image">
+          
+          <li><input type="checkbox" id="garlic-checkbox" /> <label for="garlic-checkbox"></label>
+            Italiano Pizza With Garlic <span class="price">&#8377 5.6</span> </li>
+          <img src="garlicpizza.jpg" alt="Opulent Flavors Logo" class="logo-image">
+          
+          <li><input type="checkbox" id="kemangi-checkbox" /> <label for="kemangi-checkbox"></label>
+             Pizza with Kemangi Leaf <span class="price">&#8377 5.6</span></li>
+          <img src="thaipizza.jpg" alt="Opulent Flavors Logo" class="logo-image">
+
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
